@@ -1,0 +1,241 @@
+:root{
+    --very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --desaturated-dark-blue: hsl(214, 17%, 51%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
+    --grayish-blue: hsl(212, 23%, 69%);
+}
+
+*, *::before, *::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-size: .8125rem;
+    font-family: 'Manrope', sans-serif;
+    margin-inline: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--light-grayish-blue);
+}
+
+h1{
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: .0125rem;
+    color: var(--very-dark-grayish-blue);
+    font-weight: 700;
+}
+
+p{
+    font-size: .8125rem;
+    line-height: 1.25rem;
+    letter-spacing: .0075rem;
+    color: var(--desaturated-dark-blue);
+    font-weight: 500;
+}
+
+.card{
+    width: 327px;
+
+    padding-inline: 2rem;
+    padding-bottom: 1.25rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    background-color: white;
+
+    border-radius: 10px;
+    position: relative;
+}
+
+.card-content{
+    margin-top: 2.25rem;
+}
+
+.content-body{
+    margin-top: .75rem;
+    margin-bottom: 2rem;
+}
+
+.card-footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.profile{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image{
+    width: 327px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.profile-image{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.profile-info{
+    margin-left: 1rem;
+}
+
+.profile-name{
+    font-weight: 700;
+    color: var(--very-dark-grayish-blue);
+}
+
+.profile-date{
+    color: var(--grayish-blue);
+}
+
+.icon-share{
+    width: 2rem;
+    height: 2rem;
+    padding: .5625rem;
+    border-radius: 50%;
+    margin-left: 2.25rem;
+    background: var(--light-grayish-blue);
+}
+
+.icon-share path{
+    fill: var(--desaturated-dark-blue);
+}
+
+.dark{
+    background: var(--desaturated-dark-blue) !important;
+}
+
+#icon-share-wrapper path{
+    fill: white;
+}
+
+.share-wrapper{
+    display: none;
+}
+
+.share-text{
+    text-transform: uppercase;
+    letter-spacing: .35rem;
+    font-weight: 500;
+    color: var(--grayish-blue);
+    margin-right: 1.25rem;
+}
+
+.share-overlay{
+    background-color: var(--very-dark-grayish-blue);
+    z-index: 9999;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 2rem;
+    padding-block: 1.25rem;
+    width: 327px;
+    border-radius: 0 0 10px 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.share-socials{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+}
+
+.social-icon:nth-child(3){
+    margin-inline: 1rem;
+}
+
+@media screen and (min-width: 55rem){
+    h1{
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+        letter-spacing: .015625rem;
+    }
+
+    .card{
+        width: 730px;
+        height: 280px;
+        padding: 0;
+        flex-direction: row;
+    }
+
+    .hero-image{
+        width: 285px;
+        height: 100%;
+        border-radius: 10px 0 0 10px;
+    }
+
+    .card-content{
+        margin: 0;
+        padding-block: 2rem;
+        padding-inline: 2.5rem;
+        flex-direction: column;
+    }
+
+    .content-body{
+        margin-bottom: 1.25rem;
+    }
+    
+    .icon-share{
+        position: relative;
+        background: var(--light-grayish-blue);
+    }
+
+    .share-wrapper{
+        position: absolute;
+        right: -68px;
+        bottom: 115px;
+    }
+
+    .share-overlay{
+        border-radius: 10px;
+        width: 248px;
+        height: 55px;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: 20px;
+    }
+
+    .share-beak{
+        width: 20px;
+        height: 22px;
+        background-color: var(--very-dark-grayish-blue);
+        display: block;
+        position:absolute;
+        bottom: -10px;
+        transform: rotate(45deg);
+    }
+
+    .dark{
+        display: none !important;
+    }
+
+    .active{
+        background: var(--desaturated-dark-blue) !important;
+    }
+
+    .active path{
+        fill: white;
+    }
+}
